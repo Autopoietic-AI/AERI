@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# OS
+.DS_Store
+
+# Large data and generated assets
+data/
+datasets/
+features/
+geo_assets/
+maskshape_assets/
+sam2_masks/
+yolo_assets/
+checkpoints/
+models/
+results/
+logs/
+diagnostics/
+artifacts/
+
+# Large file formats
+*.npy
+*.npz
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.jpg
+*.jpeg
+*.png
+*.webp
+
+# Temporary
+tmp/
+temp/
+*.log
