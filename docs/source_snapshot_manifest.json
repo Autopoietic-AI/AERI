@@ -1,0 +1,438 @@
+{
+  "project": "AERI",
+  "release_date": "2026-10-21",
+  "source_snapshot_name": "GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923",
+  "original_python_files": 20,
+  "source_files": [
+    {
+      "source_path": "cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py",
+      "released_path": "cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py",
+      "sha256": "27758c011157fb6fd1774b0968f8a2b9fb00e4ecac2c869ac21d72968ba39810",
+      "bytes": 31915
+    },
+    {
+      "source_path": "cat101_native/build_cat101_a4_geo_assets_hybrid_tip_center.py",
+      "released_path": "cat101_native/build_cat101_a4_geo_assets_hybrid_tip_center.py",
+      "sha256": "7fed554d6b550c072452ad877c0a972f17e7644129aeece833cc26d7171d8994",
+      "bytes": 9352
+    },
+    {
+      "source_path": "cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py",
+      "released_path": "cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py",
+      "sha256": "3c931d39d16a1f472b50038f39de8b4b9685c15da74e80847abb45d70d03d085",
+      "bytes": 5373
+    },
+    {
+      "source_path": "cat101_native/build_cat101_maskshape_assets_v1.py",
+      "released_path": "cat101_native/build_cat101_maskshape_assets_v1.py",
+      "sha256": "dac55e9407a06e1a857e630d8cf5f229916ea239bcb0a2afefad67be01032d6e",
+      "bytes": 10264
+    },
+    {
+      "source_path": "cat101_native/build_cat101_sam2_masks_full_packed.py",
+      "released_path": "cat101_native/build_cat101_sam2_masks_full_packed.py",
+      "sha256": "e6a42d68f41983bcfb27d9380d37994738dd3aa84df4f4d050ab62784faa62da",
+      "bytes": 12188
+    },
+    {
+      "source_path": "cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py",
+      "released_path": "cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py",
+      "sha256": "22a9216134ef5131996346fc54073d4d05fc2326d359fb05bdf99e9a8d4bc6ed",
+      "bytes": 23969
+    },
+    {
+      "source_path": "cat101_native/extract_cat101_a3b_v12_dualgate_features.py",
+      "released_path": "cat101_native/extract_cat101_a3b_v12_dualgate_features.py",
+      "sha256": "ee771aaf2fcb29d34822054c33fdbb981837cd239b89e20bec2a63dc9f42fd02",
+      "bytes": 8757
+    },
+    {
+      "source_path": "cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py",
+      "released_path": "cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py",
+      "sha256": "406dff086825ebd605e56d3108b37a5b3be251b140cffcdc8031105f6eaabec4",
+      "bytes": 12288
+    },
+    {
+      "source_path": "cat101_native/make_maskshape_v1_clean.py",
+      "released_path": "cat101_native/make_maskshape_v1_clean.py",
+      "sha256": "ff25da94fa9edb44845a0036679e301d51cb7c3bcc47ad3d66e2eda862ac810a",
+      "bytes": 3161
+    },
+    {
+      "source_path": "cat101_native/make_maskshape_v1_safe.py",
+      "released_path": "cat101_native/make_maskshape_v1_safe.py",
+      "sha256": "56110d5b81cf0eeaff5235746695ad92575a6655ac4e1236abeeea7aa30926a8",
+      "bytes": 3854
+    },
+    {
+      "source_path": "cat101_native/train_cat101_a3b_v12_dualgate_framecls.py",
+      "released_path": "cat101_native/train_cat101_a3b_v12_dualgate_framecls.py",
+      "sha256": "28afa0712802e74f932b93961d291a1d9200fd42c5d5dc27ced21fd221f6c4e2",
+      "bytes": 15994
+    },
+    {
+      "source_path": "cataract1k_contract/case_4687_gt_head200.txt",
+      "released_path": "cataract1k_contract/case_4687_gt_head200.txt",
+      "sha256": "aa6acfe08f904a853a59ed7e25d2f710fa1d5f6007cbc96c17298cdca3474fe0",
+      "bytes": 2200
+    },
+    {
+      "source_path": "cataract1k_contract/frame_counts.json",
+      "released_path": "cataract1k_contract/frame_counts.json",
+      "sha256": "55d88a7e37392c49373021064409186be6a4cc1d3a0a97425ed797921c349799",
+      "bytes": 390
+    },
+    {
+      "source_path": "cataract1k_contract/gt_line_counts.txt",
+      "released_path": "cataract1k_contract/gt_line_counts.txt",
+      "sha256": "970b2e1c870ef259166765582ca0b28efc73e72f0cc4f7c79f6f410733d5aa62",
+      "bytes": 6175
+    },
+    {
+      "source_path": "cataract1k_contract/mapping.txt",
+      "released_path": "cataract1k_contract/mapping.txt",
+      "sha256": "702cd841647b5d75227ca53edf106ad2df7aaa4808ed8d4ffc3f428c8ce41aa6",
+      "bytes": 256
+    },
+    {
+      "source_path": "cataract1k_contract/raw_labels.json",
+      "released_path": "cataract1k_contract/raw_labels.json",
+      "sha256": "6c2f86c6583ad5ec480e95b491c12606f2667d9ad08c0951147f6984db0421b2",
+      "bytes": 330
+    },
+    {
+      "source_path": "cataract1k_contract/splits/test.split1.bundle",
+      "released_path": "cataract1k_contract/splits/test.split1.bundle",
+      "sha256": "5e9b00edf13c431c23b64eb25fb9d10c4565b3027890764c60e25b3aa3180910",
+      "bytes": 196
+    },
+    {
+      "source_path": "cataract1k_contract/splits/test.split2.bundle",
+      "released_path": "cataract1k_contract/splits/test.split2.bundle",
+      "sha256": "13e8269fe6152a89c99a90c82452067bdaac42789f03f1d2c932f0efe7f07504",
+      "bytes": 196
+    },
+    {
+      "source_path": "cataract1k_contract/splits/test.split3.bundle",
+      "released_path": "cataract1k_contract/splits/test.split3.bundle",
+      "sha256": "2e50739a364b7f126c2b627382ada72fe38ee23852f2fe13b83a7a02fc1e795c",
+      "bytes": 196
+    },
+    {
+      "source_path": "cataract1k_contract/splits/test.split4.bundle",
+      "released_path": "cataract1k_contract/splits/test.split4.bundle",
+      "sha256": "dc2e34bc2be998a655755ab65e213c81391a4cae76800eb26b9462619df795c6",
+      "bytes": 196
+    },
+    {
+      "source_path": "cataract1k_contract/splits/train.split1.bundle",
+      "released_path": "cataract1k_contract/splits/train.split1.bundle",
+      "sha256": "e210a1b1e60df449aae6342d180900c35e7a0c08b5e8f7a2e4a7dc4c882c8efb",
+      "bytes": 588
+    },
+    {
+      "source_path": "cataract1k_contract/splits/train.split2.bundle",
+      "released_path": "cataract1k_contract/splits/train.split2.bundle",
+      "sha256": "fd73434e04ce8a9270eee531d411506cc182e54c4dee62bc59265cbfca135b22",
+      "bytes": 588
+    },
+    {
+      "source_path": "cataract1k_contract/splits/train.split3.bundle",
+      "released_path": "cataract1k_contract/splits/train.split3.bundle",
+      "sha256": "a38411485df6dc5fd0b246c11261adfb0379310fd0a019a56af290de9f7b276f",
+      "bytes": 588
+    },
+    {
+      "source_path": "cataract1k_contract/splits/train.split4.bundle",
+      "released_path": "cataract1k_contract/splits/train.split4.bundle",
+      "sha256": "6d0775889aaa288a0ad151dad2a714bd55536794a5b100926c70a6bfa7065f2a",
+      "bytes": 588
+    },
+    {
+      "source_path": "cataract1k_contract/splits_seed42.json",
+      "released_path": "cataract1k_contract/splits_seed42.json",
+      "sha256": "56c520ac6fa4001636776a91c2e7938eacc9750ddec8cf63789e15023a62e0e2",
+      "bytes": 4474
+    },
+    {
+      "source_path": "cataract1k_contract/video_links.txt",
+      "released_path": "cataract1k_contract/video_links.txt",
+      "sha256": "ba18e317041cfaabbae8bd23c78842903b7650adbd7b456862b4200dd3441943",
+      "bytes": 5392
+    },
+    {
+      "source_path": "cataract1k_contract/video_manifest.csv",
+      "released_path": "cataract1k_contract/video_manifest.csv",
+      "sha256": "9856009afb99b3fab8daca50b299713666618b1085708e5fa613a5744eb7a991",
+      "bytes": 3036
+    },
+    {
+      "source_path": "README_SCOPE.txt",
+      "released_path": "release_docs/SOURCE_SNAPSHOT_SCOPE.txt",
+      "sha256": "fad26889b118dcbdbcaba46c461e977152575694c846f683d1ae4468d2003d27",
+      "bytes": 1373
+    },
+    {
+      "source_path": "release_docs/CANONICAL_CONTRACT.md",
+      "released_path": "release_docs/CANONICAL_CONTRACT.md",
+      "sha256": "7ca0bc405dc6f92faa92f6c0d6dbb151c403b723b1214dbe868a3203caa52c85",
+      "bytes": 1153
+    },
+    {
+      "source_path": "release_docs/KNOWN_AUDIT_NOTES.md",
+      "released_path": "release_docs/KNOWN_AUDIT_NOTES.md",
+      "sha256": "73cf80f58140f2b624e22bd1ec380f5e2e7da4f1640082e1bb908ee9c711df85",
+      "bytes": 1352
+    },
+    {
+      "source_path": "release_docs/NEW_DATASET_WORKFLOW.md",
+      "released_path": "release_docs/NEW_DATASET_WORKFLOW.md",
+      "sha256": "c3e4f1c5945a5c6332c17b55c8aa8ddd56562df1b19b446ab7ee7c4511abf6ff",
+      "bytes": 833
+    },
+    {
+      "source_path": "release_docs/PIPELINE.md",
+      "released_path": "release_docs/PIPELINE.md",
+      "sha256": "de1f1c68b6779f3dfed9a7f2eebf06251eb1e5c765c39f4962c3dd6736bf3200",
+      "bytes": 674
+    },
+    {
+      "source_path": "release_docs/README.md",
+      "released_path": "release_docs/README.md",
+      "sha256": "1a9f54e9257fa6784298e00e298a4be7a90e43ae6ee77749e5c110a2dc2392c0",
+      "bytes": 709
+    },
+    {
+      "source_path": "reports/identity_and_verify.txt",
+      "released_path": "reports/identity_and_verify.txt",
+      "sha256": "5562c8c4e78f39783c52e3d1e247390a52f15c555482057bab20784b4b920092",
+      "bytes": 10955
+    },
+    {
+      "source_path": "reports/path_and_io_contracts.txt",
+      "released_path": "reports/path_and_io_contracts.txt",
+      "sha256": "1c5cddecd1e8ee16601cbfcbb97837d9ab78a12805fbe6aafcbb01d7174c025c",
+      "bytes": 93203
+    },
+    {
+      "source_path": "reports/python_compile.txt",
+      "released_path": "reports/python_compile.txt",
+      "sha256": "5b62a5373ec9ff3b4dabedd00aa8f2077019902a109a9908400c259ccb88873b",
+      "bytes": 2600
+    },
+    {
+      "source_path": "reports/sha256.txt",
+      "released_path": "reports/sha256.txt",
+      "sha256": "bd9859a61902d55a487fafc7e8fa845cea89de3a9c2adb128cd56108ef328d96",
+      "bytes": 5531
+    },
+    {
+      "source_path": "reports/sha256_current.txt",
+      "released_path": "reports/sha256_current.txt",
+      "sha256": "3f9683c3112b6fd64616ecdeb40f535138a1901040fbe4f972de49d97a2ec313",
+      "bytes": 8669
+    },
+    {
+      "source_path": "reports/symbol_index.txt",
+      "released_path": "reports/symbol_index.txt",
+      "sha256": "fe799198870db815db0cb5e803827bd1152e6560e713e7048d724dad23ddef7a",
+      "bytes": 31557
+    },
+    {
+      "source_path": "reports/YOLO_UPDATE_20260905.json",
+      "released_path": "reports/YOLO_UPDATE_20260905.json",
+      "sha256": "73ffdb22eb9a905de07e748608e7c236e16d917b3349aec5558bf5fb2fc71634",
+      "bytes": 1828
+    },
+    {
+      "source_path": "sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py",
+      "released_path": "sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py",
+      "sha256": "1953f1b0964e4b89d591129bd469b827340e382ef87b03c20e8c0a43a44d392c",
+      "bytes": 15349
+    },
+    {
+      "source_path": "sics_cross/build_sics155_100_maskshape_assets_v1_safe.py",
+      "released_path": "sics_cross/build_sics155_100_maskshape_assets_v1_safe.py",
+      "sha256": "ba05c70dc52981ea87e4d11603f76cb370f8d61b5a1d43ba4edd686935b63c3b",
+      "bytes": 14760
+    },
+    {
+      "source_path": "sics_cross/build_sics155_100_sam2_masks_full_packed.py",
+      "released_path": "sics_cross/build_sics155_100_sam2_masks_full_packed.py",
+      "sha256": "4ff0e362e79e4ff8dfb0854d42be02544afbc529073fd88a9b025679c29a82d5",
+      "bytes": 14657
+    },
+    {
+      "source_path": "sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py",
+      "released_path": "sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py",
+      "sha256": "158be96fb492d468067d75c1d30a5a2a4699c6f4197ac6373c3185a17c37ffb8",
+      "bytes": 12187
+    },
+    {
+      "source_path": "sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py",
+      "released_path": "sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py",
+      "sha256": "fcb0c2b4068ff4e9537b865c01561274044c3c4199c3a15a52df0a2375015297",
+      "bytes": 13179
+    },
+    {
+      "source_path": "stagefusion/eval.py",
+      "released_path": "stagefusion/eval.py",
+      "sha256": "5fc39e06d5eb0da48eb2d052662b7cb6c074d40a7915f9efa6d1ce754cb4b1e0",
+      "bytes": 4957
+    },
+    {
+      "source_path": "stagefusion/main_cat101_a5_tig_stagefusion.py",
+      "released_path": "stagefusion/main_cat101_a5_tig_stagefusion.py",
+      "sha256": "1802b7ad01b90c827fb0e1b1a27593b1292701bc7cccb91dabadf4a218662516",
+      "bytes": 20733
+    },
+    {
+      "source_path": "stagefusion/model_a5_tig_stagefusion.py",
+      "released_path": "stagefusion/model_a5_tig_stagefusion.py",
+      "sha256": "1df792afc503889cda60613372207f9ec45b2877676f0d52918177d4f1ab49d2",
+      "bytes": 23831
+    },
+    {
+      "source_path": "stagefusion/model_a5_tig_stagefusion_ablation.py",
+      "released_path": "stagefusion/model_a5_tig_stagefusion_ablation.py",
+      "sha256": "6f8029f02271e62941f9faaf7ad6daeaa38fe430048ab45c48c98c2952311b99",
+      "bytes": 26347
+    },
+    {
+      "source_path": "stagefusion/run_4way_ablation_seed42.sh",
+      "released_path": "stagefusion/run_4way_ablation_seed42.sh",
+      "sha256": "70cfad4d3c650218bada18122c2c5c85ca218c14177b4d3e825f71ff57442a43",
+      "bytes": 5330
+    }
+  ],
+  "excluded_files": [
+    {
+      "path": "cat101_native/__pycache__/7_train_m8_igcoattn_v1_2_dualgate_framecls.cpython-312.pyc",
+      "bytes": 42073,
+      "reason": "weights or generated bytecode"
+    },
+    {
+      "path": "cat101_native/__pycache__/build_cat101_a4_geo_assets_hybrid_tip_center.cpython-312.pyc",
+      "bytes": 15523,
+      "reason": "weights or generated bytecode"
+    },
+    {
+      "path": "cat101_native/__pycache__/build_cat101_a4_geo_assets_yolo_tiptrack_cons.cpython-312.pyc",
+      "bytes": 8523,
+      "reason": "weights or generated bytecode"
+    },
+    {
+      "path": "cat101_native/__pycache__/build_cat101_maskshape_assets_v1.cpython-312.pyc",
+      "bytes": 16066,
+      "reason": "weights or generated bytecode"
+    },
+    {
+      "path": "cat101_native/__pycache__/build_cat101_sam2_masks_full_packed.cpython-312.pyc",
+      "bytes": 20038,
+      "reason": "weights or generated bytecode"
+    },
+    {
+      "path": "cat101_native/__pycache__/debug_cat101_a4_v1c_cons_yolo_tiptrack.cpython-312.pyc",
+      "bytes": 41158,
+      "reason": "weights or generated bytecode"
+    },
+    {
+      "path": "cat101_native/__pycache__/extract_cat101_a3b_v12_dualgate_features.cpython-312.pyc",
+      "bytes": 15682,
+      "reason": "weights or generated bytecode"
+    },
+    {
+      "path": "cat101_native/__pycache__/extract_cat101_yolo_npz_assets_v2_multiinst.cpython-312.pyc",
+      "bytes": 18693,
+      "reason": "weights or generated bytecode"
+    },
+    {
+      "path": "cat101_native/__pycache__/make_maskshape_v1_clean.cpython-312.pyc",
+      "bytes": 5469,
+      "reason": "weights or generated bytecode"
+    },
+    {
+      "path": "cat101_native/__pycache__/make_maskshape_v1_safe.cpython-312.pyc",
+      "bytes": 6129,
+      "reason": "weights or generated bytecode"
+    },
+    {
+      "path": "cat101_native/__pycache__/train_cat101_a3b_v12_dualgate_framecls.cpython-312.pyc",
+      "bytes": 26654,
+      "reason": "weights or generated bytecode"
+    },
+    {
+      "path": "sics_cross/__pycache__/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.cpython-312.pyc",
+      "bytes": 24521,
+      "reason": "weights or generated bytecode"
+    },
+    {
+      "path": "sics_cross/__pycache__/build_sics155_100_maskshape_assets_v1_safe.cpython-312.pyc",
+      "bytes": 23013,
+      "reason": "weights or generated bytecode"
+    },
+    {
+      "path": "sics_cross/__pycache__/build_sics155_100_sam2_masks_full_packed.cpython-312.pyc",
+      "bytes": 23607,
+      "reason": "weights or generated bytecode"
+    },
+    {
+      "path": "sics_cross/__pycache__/extract_sics155_100_a3b_v12_dualgate_features.cpython-312.pyc",
+      "bytes": 20538,
+      "reason": "weights or generated bytecode"
+    },
+    {
+      "path": "sics_cross/__pycache__/extract_sics155_100_yolo_npz_assets_v2_multiinst.cpython-312.pyc",
+      "bytes": 20365,
+      "reason": "weights or generated bytecode"
+    },
+    {
+      "path": "stagefusion/__pycache__/eval.cpython-312.pyc",
+      "bytes": 8067,
+      "reason": "weights or generated bytecode"
+    },
+    {
+      "path": "stagefusion/__pycache__/main_cat101_a5_tig_stagefusion.cpython-312.pyc",
+      "bytes": 31528,
+      "reason": "weights or generated bytecode"
+    },
+    {
+      "path": "stagefusion/__pycache__/model_a5_tig_stagefusion.cpython-312.pyc",
+      "bytes": 30302,
+      "reason": "weights or generated bytecode"
+    },
+    {
+      "path": "stagefusion/__pycache__/model_a5_tig_stagefusion_ablation.cpython-312.pyc",
+      "bytes": 32089,
+      "reason": "weights or generated bytecode"
+    },
+    {
+      "path": "weights/yolo/e_best.pt",
+      "bytes": 5512708,
+      "reason": "weights or generated bytecode"
+    },
+    {
+      "path": "weights/yolo/i_best.pt",
+      "bytes": 5532228,
+      "reason": "weights or generated bytecode"
+    },
+    {
+      "path": "weights/yolo/manifest.json",
+      "bytes": 1285,
+      "reason": "weights or generated bytecode"
+    },
+    {
+      "path": "weights/yolo/README.md",
+      "bytes": 1318,
+      "reason": "weights or generated bytecode"
+    }
+  ],
+  "upstream_decoder": {
+    "repository": "https://github.com/sj-li/MS-TCN2",
+    "commit": "9d31fb3c23467b9ce3030d43b6d33a96869b6422",
+    "released_path": "stagefusion/model.py",
+    "sha256": "90d1aa702321e323602d75695b4460cdd3014faade5d2ee62bb0ec2303b2e61d"
+  },
+  "weights_included": false,
+  "computational_source_modified": false
+}

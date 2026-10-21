@@ -1,0 +1,28 @@
+YOLO WEIGHTS UPDATE — 2026-09-05
+
+This working copy now includes two audited YOLO11n detector checkpoints:
+  weights/yolo/e_best.pt — eye_yolo_v32 (2026-05-06)
+  weights/yolo/i_best.pt — instrument_yolo_v6_101_split2 (2026-05-07)
+
+The Cat101 and SICS detection scripts resolve these packaged files relative to
+their own locations and default to image size 960. Existing dataset paths,
+confidence thresholds, feature definitions and StageFusion source are preserved.
+See weights/yolo/README.md and reports/YOLO_UPDATE_20260905.json for provenance.
+reports/sha256.txt remains the historical source-snapshot record; use
+reports/sha256_current.txt to verify this updated package.
+
+This update does not rerun or replace the original experimental results.
+Other model checkpoints, datasets and cached features remain external.
+
+----- ORIGINAL SNAPSHOT DESCRIPTION (2026-08-09; historical) -----
+This is a READ-ONLY source snapshot.
+
+Purpose:
+- stop patch-by-patch debugging;
+- capture exact Cat101 native-MP4 preprocessing, SICS cross-dataset preprocessing,
+  final StageFusion, and Cataract-1K small dataset contract in one bundle;
+- build one dataset-agnostic native pipeline from exact source, not from guesses.
+
+No weights, raw videos, large features, masks, or checkpoints are copied.
+No project source is modified.
+No GPU job is launched.

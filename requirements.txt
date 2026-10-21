@@ -3,6 +3,12 @@ scipy
 scikit-learn
 matplotlib
 opencv-python
+pandas
+Pillow
 tqdm
 torch
 torchvision
+timm
+ultralytics
+loguru
+# Install SAM2 separately from its official repository when building masks.

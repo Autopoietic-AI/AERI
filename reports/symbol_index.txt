@@ -1,0 +1,190 @@
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:22:def first_annotation_map():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:32:def read_ids(bundle):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:43:def gt_len(vid):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:48:def get_top1(result):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:60:def get_topk(result, k=2):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:83:def draw_box(img, box, conf, label, color):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:110:def process_video(vid, eye_model, inst_model, first_map, args):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:349:def main():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:29:def prepare_out():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:46:def read_ids(bundle):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:56:def gt_len(vid):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:61:def clamp_box(box, W, H):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:72:def expand_box(box, W, H, ratio=0.08):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:85:def rect_mask_for_box(box, H, W):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:95:def run_sam_one_box(predictor, box, H, W, box_expand=0.08, clip_to_box=True):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:134:def resize_and_pack(mask):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:140:def mask_stats(mask):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:152:def overlay_masks(frame, eye_mask, inst_mask):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:165:def process_video(vid, predictor, args):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:353:def main():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:20:def log(x):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:24:def load_old_module():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:31:def get_num_classes():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:48:def prepare_out(out_data):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:64:def get_video_ids():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:71:def gt_len(video_id):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:76:def unpack_masks_batch(packed_batch, h=224, w=224):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:81:def preprocess_x5(frames, inst_masks, eye_masks):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:101:def build_model(ckpt_path, device):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:143:def extract_one(video_id, model, captured, device, out_data, batch_size=32, overwrite=False, progress_every=3000):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:241:def main():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:23:def log(x):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:27:def load_old_module():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:34:def load_mapping():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:54:def get_num_classes():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:70:def read_bundle(split, mode):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:83:def read_gt(video_id, label_map):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:95:def unpack_mask(packed, h=224, w=224):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:100:def bce_prob(pred, target):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:117:def downsample_mask(mask, size_hw):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:121:class Cat101FrameSampleDataset(Dataset):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:243:def compute_loss(logits, y, attn, inst_mask, eye_mask, lambda_inst, lambda_eye, lambda_gate):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:275:def run_epoch(model, loader, optimizer, device, train=True, args=None):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:337:def main():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:61:def set_seed(seed: int = 3407):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:68:def read_mapping(mapping_path: str) -> Tuple[Dict[str, int], Dict[int, str]]:
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:92:def read_bundle(bundle_path: str) -> List[str]:
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:116:def ensure_dir(path: str):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:120:def load_gray_mask(path: str, size_hw: Tuple[int, int]) -> np.ndarray:
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:137:def combine_inst_masks(inst_root: str, video_id: str, phase_name: str, frame_stem: str, size_hw: Tuple[int, int]) -> np.ndarray:
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:159:def dilate_mask_tensor(mask: torch.Tensor, k: int = 9) -> torch.Tensor:
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:170:def make_interaction_prior(inst_mask: torch.Tensor, eye_mask: torch.Tensor, k_inst: int = 13, k_eye: int = 9) -> torch.Tensor:
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:188:def dice_loss(pred: torch.Tensor, target: torch.Tensor, eps: float = 1e-6) -> torch.Tensor:
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:200:def bce_dice_loss(pred: torch.Tensor, target: torch.Tensor, weight: torch.Tensor = None) -> torch.Tensor:
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:232:class SICSFrameDataset(Dataset):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:394:class ConvBNAct(nn.Module):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:408:class M8IGCoAttnV1Asym(nn.Module):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:654:def run_one_epoch(
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:786:def main():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:23:def load_debug_module():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:30:def get_case_ids():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:37:def convert_debug_npz_to_standard(src_npz, dst_npz):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:55:def worker(args_tuple):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:111:def main():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_hybrid_tip_center.py:25:def clip_arr(x, lo, hi):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_hybrid_tip_center.py:29:def get_tips_from_asset(z):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_hybrid_tip_center.py:47:def get_presence_from_asset(z):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_hybrid_tip_center.py:54:def build_one(case_name, force=False):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_hybrid_tip_center.py:237:def main():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:19:def log(x):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:23:def unpack_mask(packed, h, w):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:28:def norm_eye_center(x, w, h):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:36:def norm_eye_area(a, h, w):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:44:def norm_boxes(boxes, w, h):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:54:def box_area(b):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:58:def inter_area(a, b):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:66:def box_iou(a, b):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:71:def containment(a, b):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:76:def center_dist_px(a, b, w, h):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:82:def merge_boxes(a, b):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:91:def expand_box(b, expand=0.08):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:103:def largest_component(mask, min_area=20):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:123:def tip_from_region(region, eye_xy, min_area=20):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:178:def region_from_box(union_mask, box, eye_xy, expand=0.08, min_area=20):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:197:def center_split_fallback(union_mask, centers_norm, eye_xy, min_area=20):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:244:def build_candidates(union_mask, boxes_t, conf_t, valid_t, eye_xy, w, h,
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:318:def track_cost(prev_tip, prev_center, cand):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:322:def assign_tracks(cands, prev_tip, prev_center, prev_active):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:371:def build_tiptrack(video_id, out_dir, conf_th=0.30, box_expand=0.08, min_area=20):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:549:def read_frame(video_id, frame_id, size=(640, 480)):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:564:def draw_points(rgb, z, t):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:609:def visualize_frames(video_id, asset_path, out_dir, indices):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:635:def plot_curves(video_id, asset_path, out_dir, start=0, end=6000):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:691:def main():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_maskshape_assets_v1.py:28:def safe_delta(x):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_maskshape_assets_v1.py:35:def unpack_stats(packed, h, w, chunk=256, bitorder="little"):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_maskshape_assets_v1.py:90:def convert_center_to_pixel(center, h, w):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_maskshape_assets_v1.py:111:def build_one(npz_path, out_path, chunk=256, bitorder="little"):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_maskshape_assets_v1.py:259:def main():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/make_maskshape_v1_clean.py:8:def clean_one(src_path, dst_path, drop_names=("union_bbox_eye_ratio",)):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/make_maskshape_v1_clean.py:60:def main():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/make_maskshape_v1_safe.py:27:def safe_one(src_path, dst_path):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/make_maskshape_v1_safe.py:86:def main():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:24:def prepare_out():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:41:def read_bundle(bundle):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:60:def gt_len(video):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:65:def read_manifest(video):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:72:def get_top1(result):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:84:def get_topk(result, k=2):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:107:def draw_box(img, box, conf, label, color):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:134:def process_video(video, eye_model, inst_model, args):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:335:def main():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:30:def prepare_out():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:47:def read_bundle(bundle):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:66:def gt_len(video):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:71:def read_manifest(video):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:78:def clamp_box(box, W, H):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:91:def expand_box(box, W, H, ratio=0.08):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:104:def rect_mask_for_box(box, H, W):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:119:def run_sam_one_box(predictor, box, H, W, box_expand=0.08, clip_to_box=True):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:158:def resize_and_pack(mask):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:164:def mask_stats(mask):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:176:def overlay_masks(frame, eye_mask, inst_mask):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:189:def process_video(video, predictor, args):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:398:def main():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:30:def log(x):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:34:def load_old_module():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:41:def get_cat101_num_classes():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:58:def prepare_out(out_data):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:80:def read_bundle(bundle):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:99:def gt_len(video):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:104:def read_manifest(video):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:111:def get_packed_key(z, candidates):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:118:def unpack_masks_batch(packed_batch, h=224, w=224):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:123:def preprocess_x5(frames, inst_masks, eye_masks):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:143:def build_model(ckpt_path, device):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:188:def extract_one(video, model, captured, device, out_data, batch_size=32, overwrite=False, progress_every=3000):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:310:def main():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:25:def prepare_out():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:42:def read_bundle(bundle):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:61:def gt_len(video):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:66:def safe_load(path):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:72:def xyxy_center(boxes):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:83:def estimate_eye_center_radius(sam, yolo):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:123:def estimate_inst_centers_tips(sam, yolo):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:198:def build_geo_traj_aux(video, sam, yolo):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:350:def process_video(video, overwrite=False):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:394:def main():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:64:def prepare_out():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:81:def read_bundle(bundle):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:100:def gt_len(video):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:104:def get_key(z, candidates):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:111:def safe_delta(x):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:118:def unpack_stats(packed, h, w, chunk=512, bitorder="little"):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:173:def build_one(video, overwrite=False, chunk=512, bitorder="little"):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:361:def main():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/model_a5_tig_stagefusion.py:37:class GeoIGConditionEncoder(nn.Module):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/model_a5_tig_stagefusion.py:104:class DilatedTemporalIGBranch(nn.Module):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/model_a5_tig_stagefusion.py:206:class TIGDFusionBranch(nn.Module):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/model_a5_tig_stagefusion.py:604:class A5TIGDFusionModel(nn.Module):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/main_cat101_a5_tig_stagefusion.py:37:def set_global_seed(seed: int):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/main_cat101_a5_tig_stagefusion.py:60:def ensure_dir(p):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/main_cat101_a5_tig_stagefusion.py:64:def fmt_sec(sec):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/main_cat101_a5_tig_stagefusion.py:74:def read_mapping(mapping_file):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/main_cat101_a5_tig_stagefusion.py:91:def get_bundle_path(root, dataset, split, mode):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/main_cat101_a5_tig_stagefusion.py:95:def load_bundle(bundle_path):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/main_cat101_a5_tig_stagefusion.py:109:def find_existing_file(base_dir, vid, suffixes):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/main_cat101_a5_tig_stagefusion.py:125:def clean_vid(vid):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/main_cat101_a5_tig_stagefusion.py:129:def load_gt_sequence(gt_path, actions_dict):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/main_cat101_a5_tig_stagefusion.py:139:def load_feature(feat_path, expected_dim=384):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/main_cat101_a5_tig_stagefusion.py:161:def load_m7_asset(path):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/main_cat101_a5_tig_stagefusion.py:196:def align_all(m8_feat, asset, target):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/main_cat101_a5_tig_stagefusion.py:220:def to_tensor_batch(x, device):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/main_cat101_a5_tig_stagefusion.py:224:def sequence_loss(outputs, target, ce, mse, smooth_w=0.15):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/main_cat101_a5_tig_stagefusion.py:249:def load_maskshape_asset(path):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/main_cat101_a5_tig_stagefusion.py:263:def align_maskshape(maskshape, T):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/main_cat101_a5_tig_stagefusion.py:266:def build_model(m8_feat_dim, num_classes, args, device):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/main_cat101_a5_tig_stagefusion.py:281:def train(args):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/main_cat101_a5_tig_stagefusion.py:436:def predict(args):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/main_cat101_a5_tig_stagefusion.py:574:def main():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/model_a5_tig_stagefusion_ablation.py:37:class GeoIGConditionEncoder(nn.Module):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/model_a5_tig_stagefusion_ablation.py:104:class DilatedTemporalIGBranch(nn.Module):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/model_a5_tig_stagefusion_ablation.py:206:class TIGDFusionBranch(nn.Module):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/model_a5_tig_stagefusion_ablation.py:658:class A5TIGDFusionModel(nn.Module):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/eval.py:8:def read_file(path):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/eval.py:15:def get_labels_start_end_time(frame_wise_labels, bg_class=["background"]):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/eval.py:36:def levenstein(p, y, norm=False):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/eval.py:62:def edit_score(recognized, ground_truth, norm=True, bg_class=["background"]):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/eval.py:68:def f_score(recognized, ground_truth, overlap, bg_class=["background"]):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/stagefusion/eval.py:93:def main():

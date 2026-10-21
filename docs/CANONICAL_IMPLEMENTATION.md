@@ -1,78 +1,20 @@
-# Canonical Implementation
+# AERI implementation map
 
-This document clarifies the exact implementation used for the released GeoIG-StageFusion experiments.
+The current release follows the native source snapshot supplied by the authors. These are the implementation files, not placeholders:
 
-## Final canonical source
+| Component | Source |
+| --- | --- |
+| Visual encoder and frame-level training | `cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py` and `cat101_native/train_cat101_a3b_v12_dualgate_framecls.py` |
+| Visual feature extraction | `cat101_native/extract_cat101_a3b_v12_dualgate_features.py`, `sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py` |
+| EASE construction | `cat101_native/build_cat101_a4_geo_assets_*.py`, corresponding `sics_cross/` builders |
+| Local/temporal evidence and branch fusion | `stagefusion/model_a5_tig_stagefusion.py` |
+| Ablation implementation | `stagefusion/model_a5_tig_stagefusion_ablation.py` |
+| Temporal training/prediction | `stagefusion/main_cat101_a5_tig_stagefusion.py`, or `aeri.py` |
+| Decoder dependency | `stagefusion/model.py` (attributed upstream MS-TCN++) |
+| Metrics | `stagefusion/eval.py` |
 
-The released canonical implementation is:
+Internal GeoIG/A5 names and the supplied source filenames are retained to keep imports and state-dictionary conventions stable. AERI is the paper and repository name.
 
-```text
-src/geoig_stagefusion/main_cat101_a5_tig_stagefusion.py
-src/geoig_stagefusion/model_a5_tig_stagefusion.py
-These files are copied from:
+The actual training entry reads `A5_GLOBAL_SEED` (default 2026), model options and the dataset arguments from the supplied source. Read the provided scripts/configuration for each experiment; source defaults are not a substitute for identifying the experiment being run.
 
-m10/a5_tig_stagefusion_r025_rsens_seeded/main_cat101_a5_tig_stagefusion.py
-m10/a5_tig_stagefusion_r025_rsens_seeded/model_a5_tig_stagefusion.py
-
-The model file is identical to the original Cat101 StageFusion implementation, while the seeded main entry adds deterministic seed control:
-
-A5_GLOBAL_SEED=2026
-Final model
-
-The final released model is GeoIG-StageFusion-r0.25.
-
-Main configuration:
-
-A5_STAGE_GATE_RESIDUAL=0.25
-A5_TIG_DILATED_OFFSETS="-16,-8,-4,-2,0,2,4,8,16"
-A5_GLOBAL_SEED=2026
-Ablation and visual-only support
-
-The released model supports:
-
-A5_ABLATE_GEO
-A5_ABLATE_TRAJ
-A5_ABLATE_MASKDYN
-A5_ABLATE_REL
-A5_ABLATE_AUX
-A5_ABLATE_DISTSPEED
-A5_ABLATE_TRAJ_DIMS
-
-Therefore, the same canonical model file supports:
-
-GeoIG-StageFusion expert
-Visual-only expert
-Component masking / ablation analysis
-Cataract101
-
-Main four-fold script:
-
-scripts/cataract101/run_cat101_a5_tig_stagefusion_r025_multisplit.sh
-SICS155_100
-
-The final SICS155_100 reported method uses:
-
-StageFusion expert
-+ one-frame de-spiking
-+ reliability-aware fallback
-
-StageFusion expert:
-
-scripts/sics155/run_sics155_100_rsens_seed2026_r025_trainval_multisplit.sh
-
-Visual-only expert:
-
-scripts/sics155/run_sics155_100_visualonly_trainval_multisplit_safe.sh
-
-One-frame de-spiking:
-
-tools/smooth_eval_dataset_v2.py
-
-Reliability-aware fallback:
-
-tools/make_sics_fallback_eval.py
-
-Fallback trigger:
-
-eye_valid_mean < 0.30 or mask_shape_valid_mean < 0.10
-
+The previously published `src/geoig_stagefusion/` paths now contain compatibility entries. Full model code lives in `stagefusion/`.

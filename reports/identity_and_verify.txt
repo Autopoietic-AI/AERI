@@ -1,0 +1,93 @@
+=== identities ===
+2026-08-09T13:19:24+08:00
+ROOT=/root/autodl-tmp/MS-TCN2
+REL=/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1
+DATA=/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/runtime_root/data/cataract1k
+
+=== release verify ===
+===== CORE =====
+[OK] /root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/code/model.py
+[OK] /root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/code/stagefusion/full_seeded/model_a5_tig_stagefusion.py
+[OK] /root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/code/stagefusion/ablation/model_a5_tig_stagefusion_ablation.py
+[OK] /root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/code/evaluation/eval.py
+===== WEIGHTS =====
+[OK] /root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/weights/yolo/e_best.pt
+[OK] /root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/weights/yolo/i_best.pt
+[OK] /root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/weights/visual_encoder/cat101_a3b_v12_dualgate_split1_best.pth
+[OK] SAM2 checkpoint candidate(s) packaged
+===== CANONICAL ASSETS =====
+[OK] /root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/canonical_assets/cataract101/visual_384d
+[OK] /root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/canonical_assets/cataract101/ease_npz
+[OK] /root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/canonical_assets/cataract101/maskshape_npz
+[OK] /root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/canonical_assets/sics155_100/visual_384d
+[OK] /root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/canonical_assets/sics155_100/ease_npz
+[OK] /root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/canonical_assets/sics155_100/maskshape_npz
+[cataract101] features=101 ease=101 maskshape=101
+ first feature: case_269.npy (384, 14666) float32
+[sics155_100] features=100 ease=100 maskshape=100
+ first feature: BL_0101.npy (384, 9345) float32
+===== SEED42 ENDPOINT COUNT =====
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/cataract101_seed42/models/tecno_cataract101_jbhi_modret_full_seed42_4fold_v1/split_2/best.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/cataract101_seed42/models/tecno_cataract101_jbhi_modret_full_seed42_4fold_v1/split_2/epoch-100.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/cataract101_seed42/models/tecno_cataract101_jbhi_modret_full_seed42_4fold_v1/split_3/best.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/cataract101_seed42/models/tecno_cataract101_jbhi_modret_full_seed42_4fold_v1/split_3/epoch-100.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/cataract101_seed42/models/tecno_cataract101_jbhi_modret_full_seed42_4fold_v1/split_4/best.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/cataract101_seed42/models/tecno_cataract101_jbhi_modret_full_seed42_4fold_v1/split_4/epoch-100.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/cataract101_seed42/models/tecno_cataract101_jbhi_modret_local_structured_seed42_4fold_v1/split_2/best.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/cataract101_seed42/models/tecno_cataract101_jbhi_modret_local_structured_seed42_4fold_v1/split_2/epoch-100.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/cataract101_seed42/models/tecno_cataract101_jbhi_modret_local_structured_seed42_4fold_v1/split_3/best.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/cataract101_seed42/models/tecno_cataract101_jbhi_modret_local_structured_seed42_4fold_v1/split_3/epoch-100.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/cataract101_seed42/models/tecno_cataract101_jbhi_modret_local_structured_seed42_4fold_v1/split_4/best.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/cataract101_seed42/models/tecno_cataract101_jbhi_modret_local_structured_seed42_4fold_v1/split_4/epoch-100.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/cataract101_seed42/models/tecno_cataract101_jbhi_modret_visual_only_seed42_4fold_v1/split_2/best.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/cataract101_seed42/models/tecno_cataract101_jbhi_modret_visual_only_seed42_4fold_v1/split_2/epoch-100.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/cataract101_seed42/models/tecno_cataract101_jbhi_modret_visual_only_seed42_4fold_v1/split_3/best.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/cataract101_seed42/models/tecno_cataract101_jbhi_modret_visual_only_seed42_4fold_v1/split_3/epoch-100.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/cataract101_seed42/models/tecno_cataract101_jbhi_modret_visual_only_seed42_4fold_v1/split_4/best.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/cataract101_seed42/models/tecno_cataract101_jbhi_modret_visual_only_seed42_4fold_v1/split_4/epoch-100.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/cataract101_seed42/models/tecno_cataract101_jbhi_modret_wtig_fixed_seed42_4fold_v1/split_2/best.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/cataract101_seed42/models/tecno_cataract101_jbhi_modret_wtig_fixed_seed42_4fold_v1/split_2/epoch-100.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/cataract101_seed42/models/tecno_cataract101_jbhi_modret_wtig_fixed_seed42_4fold_v1/split_3/best.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/cataract101_seed42/models/tecno_cataract101_jbhi_modret_wtig_fixed_seed42_4fold_v1/split_3/epoch-100.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/cataract101_seed42/models/tecno_cataract101_jbhi_modret_wtig_fixed_seed42_4fold_v1/split_4/best.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/cataract101_seed42/models/tecno_cataract101_jbhi_modret_wtig_fixed_seed42_4fold_v1/split_4/epoch-100.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_full_seed42_4fold_v1/split_1/best.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_full_seed42_4fold_v1/split_1/epoch-100.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_full_seed42_4fold_v1/split_2/best.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_full_seed42_4fold_v1/split_2/epoch-100.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_full_seed42_4fold_v1/split_3/best.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_full_seed42_4fold_v1/split_3/epoch-100.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_full_seed42_4fold_v1/split_4/best.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_full_seed42_4fold_v1/split_4/epoch-100.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_local_structured_seed42_4fold_v1/split_1/best.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_local_structured_seed42_4fold_v1/split_1/epoch-100.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_local_structured_seed42_4fold_v1/split_2/best.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_local_structured_seed42_4fold_v1/split_2/epoch-100.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_local_structured_seed42_4fold_v1/split_3/best.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_local_structured_seed42_4fold_v1/split_3/epoch-100.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_local_structured_seed42_4fold_v1/split_4/best.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_local_structured_seed42_4fold_v1/split_4/epoch-100.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_visual_only_seed42_4fold_v1/split_1/best.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_visual_only_seed42_4fold_v1/split_1/epoch-100.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_visual_only_seed42_4fold_v1/split_2/best.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_visual_only_seed42_4fold_v1/split_2/epoch-100.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_visual_only_seed42_4fold_v1/split_3/best.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_visual_only_seed42_4fold_v1/split_3/epoch-100.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_visual_only_seed42_4fold_v1/split_4/best.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_visual_only_seed42_4fold_v1/split_4/epoch-100.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_wtig_fixed_seed42_4fold_v1/split_1/best.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_wtig_fixed_seed42_4fold_v1/split_1/epoch-100.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_wtig_fixed_seed42_4fold_v1/split_2/best.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_wtig_fixed_seed42_4fold_v1/split_2/epoch-100.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_wtig_fixed_seed42_4fold_v1/split_3/best.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_wtig_fixed_seed42_4fold_v1/split_3/epoch-100.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_wtig_fixed_seed42_4fold_v1/split_4/best.model
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/reproduction/sics155_seed42/models/tecno_sics155_jbhi_modret_wtig_fixed_seed42_4fold_v1/split_4/epoch-100.model
+endpoints=56
+===== BROKEN LINKS =====
+broken_symlinks=1
+/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1/runtime_root/adapters/cataract1k/compat_project/data/sics155_100_yolo_b2_multiinst_assets
+===== SOURCE COMPILE =====
+
+[PASS] errors=0 warnings=1
+11G	/root/autodl-tmp/GEOIG_STAGEFUSION_RELEASE_V1

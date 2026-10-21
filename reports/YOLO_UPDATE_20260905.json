@@ -1,0 +1,41 @@
+{
+  "updatedAt": "2026-09-05T09:37:16.758946+00:00",
+  "originalSnapshot": "GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923",
+  "originalArchiveSha256": "339560b5c82df75d06d2353bd8ccb8db19bfe9965af4dc4ddb8d9ce5fac762e7",
+  "reason": "User requested the latest eye and instrument weights in this packaged model-code folder.",
+  "changedExistingFiles": [
+    "cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py",
+    "sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py",
+    "README_SCOPE.txt"
+  ],
+  "addedWeights": {
+    "eye": {
+      "run": "eye_yolo_v32",
+      "file": "e_best.pt",
+      "sha256": "6803dc2528e9c8d72910f264a746158557b0c8473147c6248aa90096d9b9f8d8",
+      "checkpointSavedAt": "2026-05-06T18:11:23.837428",
+      "model": "YOLO11n",
+      "task": "detect",
+      "sourceRelativeToResearchRoot": "数据处理/yolo_runs/eye_yolo_v32/weights/best.pt",
+      "bytes": 5512708,
+      "imageSize": 960
+    },
+    "instrument": {
+      "run": "instrument_yolo_v6_101_split2",
+      "file": "i_best.pt",
+      "sha256": "36ef27b92872391e28a0bee9e50ed615718c556d653491e836151d1c93732d4b",
+      "checkpointSavedAt": "2026-05-07T01:24:47.919490",
+      "model": "YOLO11n",
+      "task": "detect",
+      "sourceRelativeToResearchRoot": "数据处理/yolo_runs/instrument_yolo_v6_101_split2/weights/best.pt",
+      "bytes": 5532228,
+      "imageSize": 960
+    }
+  },
+  "defaultImageSizeBefore": 640,
+  "defaultImageSizeAfter": 960,
+  "unchanged": "StageFusion source, dataset paths, thresholds, cached assets and historical experiment reports.",
+  "originalWeightFilesInPackage": false,
+  "originalArchiveWeightEntries": 0,
+  "checksumPolicy": "Historical reports/sha256.txt preserved; portable current manifest added as reports/sha256_current.txt."
+}

@@ -1,0 +1,13 @@
+0 background
+1 Incision
+2 Viscoelastic
+3 Capsulorhexis
+4 Hydrodissection
+5 Phacoemulsification
+6 Irrigation/Aspiration
+7 Capsule_Pulishing
+8 Lens_Implantation
+9 Lens_positioning
+10 Viscoelastic_Suction
+11 Tonifying/Antibiotics
+12 Anterior_Chamber_Flushing

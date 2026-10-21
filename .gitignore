@@ -42,3 +42,18 @@ artifacts/
 tmp/
 temp/
 *.log
+
+# AERI code-only policy: no weights, even if small.
+weights/
+*.safetensors
+*.weights
+*.bin
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.engine
+*.tflite
+*.pb
+.env
+*.secrets.env

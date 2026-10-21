@@ -1,3 +1,5 @@
+> Historical GeoIG release documentation. Retained for provenance and existing utilities; see README.md, docs/CANONICAL_IMPLEMENTATION.md and docs/RELEASE_SCOPE.md for the current AERI source release. Historical result tables and fallback settings are not the current paper's result/protocol declaration.
+
 # Experiment Summary
 
 This document summarizes the main experimental results included in the release.

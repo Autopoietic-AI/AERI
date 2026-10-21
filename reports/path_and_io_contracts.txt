@@ -1,0 +1,502 @@
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:9:from ultralytics import YOLO
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:12:ROOT = Path("/root/autodl-tmp/MS-TCN2")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:14:A0 = ROOT / "data/cataract101_m10_a0_rgb2048"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:16:EYE_YOLO = ROOT / "m10/e_best.pt"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:17:INST_YOLO = ROOT / "m10/i_best.pt"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:19:OUT_ROOT = ROOT / "data/cataract101_m10_yolo_b2_multiinst_assets"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:34:    with open(A0 / "splits" / bundle, encoding="utf-8") as f:
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:44:    p = A0 / "groundTruth" / f"case_{vid}.txt"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:111:    npz_dir = OUT_ROOT / "npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:112:    meta_dir = OUT_ROOT / "meta"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:113:    vis_dir = OUT_ROOT / "vis" / f"case_{vid}"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:129:        if "frame_ids" in z and len(z["frame_ids"]) == T and "inst_xyxy_multi" in z:
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:134:    cap = cv2.VideoCapture(str(video_path))
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:139:    frame_ids = np.arange(start, start + T, dtype=np.int32)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:287:    np.savez_compressed(
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:289:        frame_ids=frame_ids,
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:317:        "eye_yolo": str(EYE_YOLO),
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:318:        "inst_yolo": str(INST_YOLO),
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:352:    ap.add_argument("--video_id", type=int, default=None)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:353:    ap.add_argument("--bundle", default="all.bundle")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:354:    ap.add_argument("--batch", type=int, default=32)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:355:    ap.add_argument("--imgsz", type=int, default=640)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:357:    ap.add_argument("--eye_conf", type=float, default=0.15)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:358:    ap.add_argument("--inst_conf", type=float, default=0.10)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:359:    ap.add_argument("--iou", type=float, default=0.70)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:360:    ap.add_argument("--max_det", type=int, default=10)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:361:    ap.add_argument("--max_inst", type=int, default=2)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:363:    ap.add_argument("--device", default="0")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:364:    ap.add_argument("--save_vis", type=int, default=1)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:365:    ap.add_argument("--vis_stride", type=int, default=800)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:366:    ap.add_argument("--overwrite", action="store_true")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:370:    print("===== Cataract101 YOLO B2 Multi-Instrument Extraction =====")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:371:    print("eye_yolo :", EYE_YOLO)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:372:    print("inst_yolo:", INST_YOLO)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:373:    print("out_root :", OUT_ROOT)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:380:    if not EYE_YOLO.exists():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:381:        raise FileNotFoundError(EYE_YOLO)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:382:    if not INST_YOLO.exists():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:383:        raise FileNotFoundError(INST_YOLO)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:388:    eye_model = YOLO(str(EYE_YOLO))
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_yolo_npz_assets_v2_multiinst.py:389:    inst_model = YOLO(str(INST_YOLO))
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:11:from sam2.sam2_image_predictor import SAM2ImagePredictor
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:14:ROOT = Path("/root/autodl-tmp/MS-TCN2")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:17:A0 = ROOT / "data/cataract101_m10_a0_rgb2048"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:18:YOLO = ROOT / "data/cataract101_m10_yolo_b2_multiinst_assets"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:19:OUT = ROOT / "data/cataract101_m10_a2c_sam2_masks_full"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:21:SAM2_CFG = "configs/sam2.1/sam2.1_hiera_s.yaml"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:22:SAM2_CKPT = "/root/autodl-tmp/sam2_repo/checkpoints/sam2.1_hiera_small.pt"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:30:    for sub in ["npz", "vis", "meta", "groundTruth", "splits"]:
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:31:        (OUT / sub).mkdir(parents=True, exist_ok=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:33:    shutil.copy2(A0 / "mapping.txt", OUT / "mapping.txt")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:35:    for p in (A0 / "groundTruth").glob("case_*.txt"):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:36:        q = OUT / "groundTruth" / p.name
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:40:    for p in (A0 / "splits").glob("*.bundle"):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:41:        q = OUT / "splits" / p.name
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:48:    with open(A0 / "splits" / bundle, encoding="utf-8") as f:
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:57:    p = A0 / "groundTruth" / f"case_{vid}.txt"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:166:    out_npz = OUT / "npz" / f"case_{vid}.npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:167:    out_meta = OUT / "meta" / f"case_{vid}_sam2_full.json"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:168:    vis_dir = OUT / "vis" / f"case_{vid}"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:176:        if "frame_ids" in z_old and len(z_old["frame_ids"]) == T:
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:180:    yolo_path = YOLO / "npz" / f"case_{vid}.npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:185:    frame_ids = z["frame_ids"]
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:187:    if len(frame_ids) != T:
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:188:        raise RuntimeError(f"case_{vid}: YOLO T={len(frame_ids)} != GT T={T}")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:190:    start = int(frame_ids[0])
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:193:    cap = cv2.VideoCapture(str(video_path))
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:300:    np.savez_compressed(
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:302:        frame_ids=frame_ids.astype(np.int32),
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:331:        "sam2_cfg": SAM2_CFG,
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:332:        "sam2_ckpt": SAM2_CKPT,
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:355:    ap.add_argument("--video_id", type=int, default=None)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:356:    ap.add_argument("--bundle", default="all.bundle")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:357:    ap.add_argument("--box_expand", type=float, default=0.08)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:358:    ap.add_argument("--clip_to_box", type=int, default=1)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:359:    ap.add_argument("--save_vis", type=int, default=1)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:360:    ap.add_argument("--vis_stride", type=int, default=3000)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:361:    ap.add_argument("--progress_every", type=int, default=500)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:362:    ap.add_argument("--device", default="cuda")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:363:    ap.add_argument("--overwrite", action="store_true")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:370:    print("SAM2_CFG:", SAM2_CFG)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:371:    print("SAM2_CKPT:", SAM2_CKPT)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:372:    print("OUT:", OUT)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:375:        SAM2_CFG,
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:376:        SAM2_CKPT,
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_sam2_masks_full_packed.py:380:    predictor = SAM2ImagePredictor(sam2_model)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:13:ROOT = Path("/root/autodl-tmp/MS-TCN2")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:15:BASE_DATA = ROOT / "data/cataract101_m10_a0_rgb2048"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:16:MASKD = ROOT / "data/cataract101_m10_a2c_sam2_masks_full"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:17:OLD_TRAIN_PY = ROOT / "m8/7_train_m8_igcoattn_v1_2_dualgate_framecls.py"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:32:    p = BASE_DATA / "mapping.txt"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:52:    for sub in ["groundTruth", "splits"]:
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:53:        src = BASE_DATA / sub
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:61:    shutil.copy2(BASE_DATA / "mapping.txt", out_data / "mapping.txt")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:66:    for p in sorted((BASE_DATA / "groundTruth").glob("case_*.txt")):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:72:    p = BASE_DATA / "groundTruth" / f"case_{video_id}.txt"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:101:def build_model(ckpt_path, device):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:112:    ckpt = torch.load(ckpt_path, map_location="cpu")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:113:    state = ckpt["model_state_dict"] if isinstance(ckpt, dict) and "model_state_dict" in ckpt else ckpt
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:116:    log(f"[CKPT] loaded: {ckpt_path}")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:118:    log(f"[CKPT] epoch={ckpt.get('epoch') if isinstance(ckpt, dict) else None}")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:119:    log(f"[CKPT] best_acc={ckpt.get('best_acc') if isinstance(ckpt, dict) else None}")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:153:    mask_path = MASKD / "npz" / f"case_{video_id}.npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:158:    frame_ids = z["frame_ids"]
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:162:    if len(frame_ids) != T:
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:163:        raise RuntimeError(f"case_{video_id}: mask T={len(frame_ids)} != gt T={T}")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:166:    cap = cv2.VideoCapture(str(video_path))
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:175:    consecutive = bool(np.all(np.diff(frame_ids) == 1)) if len(frame_ids) > 1 else True
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:177:        cap.set(cv2.CAP_PROP_POS_FRAMES, int(frame_ids[0]))
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:210:        gid = int(frame_ids[local_idx])
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:243:    ap.add_argument("--out_dataset", type=str, default="cataract101_m10_a3b_v12_dualgate_s1_best")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:244:    ap.add_argument("--ckpt", type=str, required=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:245:    ap.add_argument("--video_id", type=int, default=None)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:246:    ap.add_argument("--batch_size", type=int, default=32)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:247:    ap.add_argument("--overwrite", action="store_true")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:250:    out_data = ROOT / "data" / args.out_dataset
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:255:    log(f"out_dataset: {args.out_dataset}")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:258:    model, captured, handle = build_model(args.ckpt, device)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:278:        "out_dataset": args.out_dataset,
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/extract_cat101_a3b_v12_dualgate_features.py:279:        "ckpt": args.ckpt,
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:16:ROOT = Path("/root/autodl-tmp/MS-TCN2")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:18:DATA = ROOT / "data/cataract101_m10_a0_rgb2048"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:19:MASKD = ROOT / "data/cataract101_m10_a2c_sam2_masks_full"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:20:OLD_TRAIN_PY = ROOT / "m8/7_train_m8_igcoattn_v1_2_dualgate_framecls.py"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:36:    p = DATA / "mapping.txt"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:55:    p = DATA / "mapping.txt"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:71:    p = DATA / "splits" / f"{mode}.split{split}.bundle"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:84:    p = DATA / "groundTruth" / f"case_{video_id}.txt"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:123:    直接读取 Cataract101 mp4 + SAM2 packed npz。
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:143:        self.video_frame_ids = {}
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:147:            mask_path = MASKD / "npz" / f"case_{vid}.npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:152:            frame_ids = z["frame_ids"]
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:154:            if len(frame_ids) != len(labels):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:155:                raise RuntimeError(f"case_{vid}: mask T={len(frame_ids)} != gt T={len(labels)}")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:158:            self.video_frame_ids[vid] = frame_ids
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:179:        log(f"[DATASET] mode={mode}, split={split}, videos={len(self.video_ids)}, samples={len(self.samples)}")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:192:        cap = cv2.VideoCapture(str(video_path))
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:196:        mask_path = MASKD / "npz" / f"case_{vid}.npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:201:            "frame_ids": z["frame_ids"],
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:214:        gid = int(self.mask_cache["frame_ids"][local_idx])
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:339:    ap.add_argument("--split", type=int, default=1)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:340:    ap.add_argument("--epochs", type=int, default=6)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:341:    ap.add_argument("--batch_size", type=int, default=16)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:342:    ap.add_argument("--lr", type=float, default=1e-4)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:343:    ap.add_argument("--weight_decay", type=float, default=1e-4)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:344:    ap.add_argument("--max_frames_per_class_per_video", type=int, default=80)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:345:    ap.add_argument("--val_max_frames_per_class_per_video", type=int, default=40)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:346:    ap.add_argument("--lambda_inst", type=float, default=0.10)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:347:    ap.add_argument("--lambda_eye", type=float, default=0.08)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:348:    ap.add_argument("--lambda_gate", type=float, default=0.08)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:349:    ap.add_argument("--num_workers", type=int, default=0)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:350:    ap.add_argument("--seed", type=int, default=3407)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:351:    ap.add_argument("--no_amp", action="store_true")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:352:    ap.add_argument("--print_every", type=int, default=50)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:353:    ap.add_argument("--save_dir", type=str, default=str(ROOT / "checkpoints/m10/a3b_v12"))
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:354:    ap.add_argument("--exp_name", type=str, default="cat101_a3b_v12_dualgate")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:445:        ckpt = {
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:452:        torch.save(ckpt, last_path)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:456:            ckpt["best_acc"] = best_acc
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/train_cat101_a3b_v12_dualgate_framecls.py:457:            torch.save(ckpt, best_path)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:128:    mask = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:789:    parser.add_argument("--base_dataset", type=str, default="sics155")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:790:    parser.add_argument("--ms_tcn_root", type=str, default="/root/autodl-tmp/MS-TCN2")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:791:    parser.add_argument("--frame_root", type=str, required=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:792:    parser.add_argument("--eye_root", type=str, required=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:793:    parser.add_argument("--inst_root", type=str, required=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:795:    parser.add_argument("--split", type=int, default=1)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:796:    parser.add_argument("--backbone", type=str, default="dm_nfnet_f0")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:797:    parser.add_argument("--img_size", type=int, default=224)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:798:    parser.add_argument("--resize_size", type=int, default=256)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:799:    parser.add_argument("--batch_size", type=int, default=8)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:800:    parser.add_argument("--num_workers", type=int, default=4)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:801:    parser.add_argument("--epochs", type=int, default=1)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:802:    parser.add_argument("--lr", type=float, default=1e-4)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:803:    parser.add_argument("--weight_decay", type=float, default=1e-4)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:804:    parser.add_argument("--max_frames_per_phase", type=int, default=200)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:805:    parser.add_argument("--seed", type=int, default=3407)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:806:    parser.add_argument("--no_amp", action="store_true")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:808:    parser.add_argument("--lambda_inst", type=float, default=0.10)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:809:    parser.add_argument("--lambda_eye", type=float, default=0.08)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:810:    parser.add_argument("--lambda_gate", type=float, default=0.08)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:812:    parser.add_argument("--save_dir", type=str, default="/root/autodl-tmp/MS-TCN2/checkpoints/m8")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:813:    parser.add_argument("--exp_name", type=str, default="m8_igcoattn_v1_2_dualgate")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:821:    splits_dir = os.path.join(args.ms_tcn_root, "data", args.base_dataset, "splits")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:822:    train_bundle = os.path.join(splits_dir, f"train.split{args.split}.bundle")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:823:    test_bundle = os.path.join(splits_dir, f"test.split{args.split}.bundle")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:957:        ckpt = {
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:968:        torch.save(ckpt, last_path)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/7_train_m8_igcoattn_v1_2_dualgate_framecls.py:972:            torch.save(ckpt, best_path)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:13:ROOT = Path("/root/autodl-tmp/MS-TCN2")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:14:SAM2 = ROOT / "data/cataract101_m10_a2c_sam2_masks_full/npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:15:YOLO = ROOT / "data/cataract101_m10_yolo_b2_multiinst_assets/npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:16:DEBUG_PY = ROOT / "m10/a4_geoig/debug_cat101_a4_v1c_cons_yolo_tiptrack.py"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:18:OUT_ROOT = ROOT / "data/cataract101_m10_a4_geo_assets_sam2_yolo_tiptrack_cons"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:19:OUT_NPZ = OUT_ROOT / "npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:20:OUT_META = OUT_ROOT / "meta"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:31:    sam_cases = {p.stem.replace("case_", "") for p in SAM2.glob("case_*.npz")}
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:32:    yolo_cases = {p.stem.replace("case_", "") for p in YOLO.glob("case_*.npz")}
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:45:    required = ["frame_ids", "eye_center", "eye_radius", "inst_tips",
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:52:    np.savez_compressed(dst_npz, **save_dict)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:58:    out_case_dir = OUT_META / f"case_{vid}"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:61:    dst_npz = OUT_NPZ / f"case_{vid}.npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:62:    dst_summary = OUT_META / f"case_{vid}_summary.json"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:113:    ap.add_argument("--workers", type=int, default=4)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:114:    ap.add_argument("--conf_th", type=float, default=0.30)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:115:    ap.add_argument("--box_expand", type=float, default=0.08)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:116:    ap.add_argument("--min_area", type=int, default=20)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:117:    ap.add_argument("--force", action="store_true")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:118:    ap.add_argument("--limit", type=int, default=0, help="smoke test: only first N cases")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:121:    OUT_NPZ.mkdir(parents=True, exist_ok=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:122:    OUT_META.mkdir(parents=True, exist_ok=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:130:    print("SAM2:", SAM2, flush=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:131:    print("YOLO:", YOLO, flush=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:132:    print("OUT_NPZ:", OUT_NPZ, flush=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:146:    summary_path = OUT_META / "summary_all.jsonl"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_yolo_tiptrack_cons.py:164:    print("Output:", OUT_NPZ, flush=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_hybrid_tip_center.py:7:ROOT = Path("/root/autodl-tmp/MS-TCN2")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_hybrid_tip_center.py:10:TIP_DIR = ROOT / "data/cataract101_m10_a4_geo_assets_sam2_yolo_tiptrack_cons/npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_hybrid_tip_center.py:13:CENTER_DIR = ROOT / "data/cataract101_m10_a4_geo_assets_sam2/npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_hybrid_tip_center.py:15:OUT_ROOT = ROOT / "data/cataract101_m10_a4_geo_assets_hybrid_tip_center"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_hybrid_tip_center.py:16:OUT_NPZ = OUT_ROOT / "npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_hybrid_tip_center.py:17:OUT_META = OUT_ROOT / "meta"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_hybrid_tip_center.py:55:    out_p = OUT_NPZ / f"{case_name}.npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_hybrid_tip_center.py:56:    out_s = OUT_META / f"{case_name}_summary.json"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_hybrid_tip_center.py:73:    frame_ids = tip_z["frame_ids"] if "frame_ids" in tip_z.files else cen_z["frame_ids"]
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_hybrid_tip_center.py:74:    T = len(frame_ids)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_hybrid_tip_center.py:200:        "frame_ids": frame_ids,
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_hybrid_tip_center.py:210:    OUT_NPZ.mkdir(parents=True, exist_ok=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_hybrid_tip_center.py:211:    OUT_META.mkdir(parents=True, exist_ok=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_hybrid_tip_center.py:212:    np.savez(out_p, **save_dict)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_hybrid_tip_center.py:239:    ap.add_argument("--force", action="store_true")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_hybrid_tip_center.py:240:    ap.add_argument("--limit", type=int, default=0)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_a4_geo_assets_hybrid_tip_center.py:254:    print("OUT_NPZ:", OUT_NPZ)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:11:ROOT = Path("/root/autodl-tmp/MS-TCN2")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:13:SAM2 = ROOT / "data/cataract101_m10_a2c_sam2_masks_full/npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:14:YOLO = ROOT / "data/cataract101_m10_yolo_b2_multiinst_assets/npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:15:GT = ROOT / "data/cataract101_m10_a0_rgb2048/groundTruth"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:16:OUT_ROOT = ROOT / "artifacts/m10_a4_tiptrack_v1c_cons_debug"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:199:    Split union mask by two YOLO box centers when YOLO duplicate leaves only one box.
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:259:    # no valid YOLO boxes
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:263:    # one valid YOLO box
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:372:    sp = SAM2 / f"case_{video_id}.npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:373:    yp = YOLO / f"case_{video_id}.npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:378:    frame_ids = s["frame_ids"]
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:381:    T = len(frame_ids)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:510:    np.savez(
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:512:        frame_ids=frame_ids,
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:551:    cap = cv2.VideoCapture(str(vp))
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:611:    frame_ids = z["frame_ids"]
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:614:        if idx < 0 or idx >= len(frame_ids):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:616:        fid = int(frame_ids[idx])
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:625:        axes[1].set_title(f"v1c-cons YOLO-clean tip-track | local={idx}, frame={fid}")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:659:    axes[0].set_title(f"case_{video_id} v1c-cons YOLO-clean tip-track distance / phase")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:693:    ap.add_argument("--video_id", type=int, required=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:694:    ap.add_argument("--indices", type=str, default="0,1200,2400,3600,4800")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:695:    ap.add_argument("--curve_start", type=int, default=0)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:696:    ap.add_argument("--curve_end", type=int, default=6000)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:697:    ap.add_argument("--conf_th", type=float, default=0.30)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:698:    ap.add_argument("--box_expand", type=float, default=0.08)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:699:    ap.add_argument("--min_area", type=int, default=20)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/debug_cat101_a4_v1c_cons_yolo_tiptrack.py:702:    out_dir = OUT_ROOT / f"case_{args.video_id}"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_maskshape_assets_v1.py:114:    frame_ids = z["frame_ids"].astype(np.int32)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_maskshape_assets_v1.py:115:    T = len(frame_ids)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_maskshape_assets_v1.py:138:    # track-level 信息：来自 SAM2 资产中已有字段
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_maskshape_assets_v1.py:221:    np.savez_compressed(
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_maskshape_assets_v1.py:223:        frame_ids=frame_ids,
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_maskshape_assets_v1.py:261:    ap.add_argument("--sam2_dir", default="data/cataract101_m10_a2c_sam2_masks_full/npz")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_maskshape_assets_v1.py:262:    ap.add_argument("--out_dir", default="data/cataract101_m10_a5_maskshape_assets_v1/npz")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_maskshape_assets_v1.py:263:    ap.add_argument("--chunk", type=int, default=256)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/build_cat101_maskshape_assets_v1.py:264:    ap.add_argument("--bitorder", type=str, default="little", choices=["big", "little"])
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/make_maskshape_v1_clean.py:32:        "frame_ids": z["frame_ids"],
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/make_maskshape_v1_clean.py:44:    np.savez_compressed(dst_path, **save_dict)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/make_maskshape_v1_clean.py:62:    ap.add_argument("--in_dir", default="data/cataract101_m10_a5_maskshape_assets_v1/npz")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/make_maskshape_v1_clean.py:63:    ap.add_argument("--out_dir", default="data/cataract101_m10_a5_maskshape_assets_v1_clean/npz")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/make_maskshape_v1_safe.py:54:        "frame_ids": z["frame_ids"],
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/make_maskshape_v1_safe.py:66:    np.savez_compressed(dst_path, **save_dict)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/make_maskshape_v1_safe.py:88:    ap.add_argument("--in_dir", default="data/cataract101_m10_a5_maskshape_assets_v1_clean/npz")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/cat101_native/make_maskshape_v1_safe.py:89:    ap.add_argument("--out_dir", default="data/cataract101_m10_a5_maskshape_assets_v1_safe/npz")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:10:from ultralytics import YOLO
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:13:ROOT = Path("/root/autodl-tmp/MS-TCN2")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:15:DATA = ROOT / "data/sics155_100_geoig_r025"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:16:MANIFEST_DIR = DATA / "frame_manifest"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:18:EYE_YOLO = ROOT / "e_best.pt"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:19:INST_YOLO = ROOT / "i_best.pt"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:21:OUT_ROOT = ROOT / "data/sics155_100_yolo_b2_multiinst_assets"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:25:    for sub in ["npz", "meta", "vis", "groundTruth", "splits"]:
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:26:        (OUT_ROOT / sub).mkdir(parents=True, exist_ok=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:28:    shutil.copy2(DATA / "mapping.txt", OUT_ROOT / "mapping.txt")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:30:    for p in (DATA / "groundTruth").glob("*.txt"):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:31:        q = OUT_ROOT / "groundTruth" / p.name
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:35:    for p in (DATA / "splits").glob("*.bundle"):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:36:        q = OUT_ROOT / "splits" / p.name
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:43:        return sorted([p.stem for p in (DATA / "groundTruth").glob("*.txt")])
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:45:    p = DATA / "splits" / bundle
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:61:    p = DATA / "groundTruth" / f"{video}.txt"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:135:    npz_dir = OUT_ROOT / "npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:136:    meta_dir = OUT_ROOT / "meta"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:137:    vis_dir = OUT_ROOT / "vis" / video
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:157:        if "frame_ids" in z and len(z["frame_ids"]) == T and "inst_xyxy_multi" in z:
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:166:    frame_ids = np.arange(T, dtype=np.int32)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:263:        frame = cv2.imread(fp)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:281:    np.savez_compressed(
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:283:        frame_ids=frame_ids,
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:337:    ap.add_argument("--bundle", default="all", help="all or split bundle name, e.g. train.split1.bundle")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:338:    ap.add_argument("--video", default=None, help="single video id, e.g. BL_0101")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:339:    ap.add_argument("--limit", type=int, default=0)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:340:    ap.add_argument("--eye_yolo", default=str(EYE_YOLO))
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:341:    ap.add_argument("--inst_yolo", default=str(INST_YOLO))
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:342:    ap.add_argument("--imgsz", type=int, default=640)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:343:    ap.add_argument("--eye_conf", type=float, default=0.25)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:344:    ap.add_argument("--inst_conf", type=float, default=0.25)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:345:    ap.add_argument("--iou", type=float, default=0.7)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:346:    ap.add_argument("--max_inst", type=int, default=2)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:347:    ap.add_argument("--batch", type=int, default=32)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:348:    ap.add_argument("--device", default="0")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:349:    ap.add_argument("--save_vis", type=int, default=0)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:350:    ap.add_argument("--vis_stride", type=int, default=3000)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:351:    ap.add_argument("--progress_every", type=int, default=1000)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:352:    ap.add_argument("--overwrite", action="store_true")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:366:    print("[SICS155_100 YOLO B2 MULTI-INST ASSET EXTRACTION]", flush=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:367:    print("DATA:", DATA, flush=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:369:    print("OUT_ROOT:", OUT_ROOT, flush=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:377:    eye_model = YOLO(args.eye_yolo)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:378:    inst_model = YOLO(args.inst_yolo)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:380:    summary_path = OUT_ROOT / "meta" / "summary_all.jsonl"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_yolo_npz_assets_v2_multiinst.py:400:    print("Output:", OUT_ROOT, flush=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:12:from sam2.sam2_image_predictor import SAM2ImagePredictor
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:15:ROOT = Path("/root/autodl-tmp/MS-TCN2")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:17:DATA = ROOT / "data/sics155_100_geoig_r025"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:18:MANIFEST = DATA / "frame_manifest"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:19:YOLO = ROOT / "data/sics155_100_yolo_b2_multiinst_assets"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:20:OUT = ROOT / "data/sics155_100_sam2_masks_full"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:22:SAM2_CFG = "configs/sam2.1/sam2.1_hiera_s.yaml"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:23:SAM2_CKPT = "/root/autodl-tmp/sam2_repo/checkpoints/sam2.1_hiera_small.pt"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:31:    for sub in ["npz", "vis", "meta", "groundTruth", "splits"]:
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:32:        (OUT / sub).mkdir(parents=True, exist_ok=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:34:    shutil.copy2(DATA / "mapping.txt", OUT / "mapping.txt")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:36:    for p in (DATA / "groundTruth").glob("*.txt"):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:37:        q = OUT / "groundTruth" / p.name
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:41:    for p in (DATA / "splits").glob("*.bundle"):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:42:        q = OUT / "splits" / p.name
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:49:        return sorted([p.stem for p in (DATA / "groundTruth").glob("*.txt")])
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:51:    p = DATA / "splits" / bundle
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:67:    p = DATA / "groundTruth" / f"{video}.txt"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:190:    out_npz = OUT / "npz" / f"{video}.npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:191:    out_meta = OUT / "meta" / f"{video}_sam2_full.json"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:192:    vis_dir = OUT / "vis" / video
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:206:        if "frame_ids" in z_old and len(z_old["frame_ids"]) == T and (
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:212:    yolo_path = YOLO / "npz" / f"{video}.npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:218:    yolo_frame_ids = y["frame_ids"]
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:219:    if len(yolo_frame_ids) != T:
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:220:        raise RuntimeError(f"{video}: yolo T={len(yolo_frame_ids)}, expected T={T}")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:237:    frame_ids = np.arange(T, dtype=np.int32)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:259:        frame = cv2.imread(fp)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:334:    np.savez_compressed(
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:336:        frame_ids=frame_ids,
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:359:        # carry YOLO information forward
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:400:    ap.add_argument("--bundle", default="all", help="all or split bundle name")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:401:    ap.add_argument("--video", default=None, help="single video id, e.g. BL_0101")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:402:    ap.add_argument("--limit", type=int, default=0)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:403:    ap.add_argument("--box_expand", type=float, default=0.08)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:404:    ap.add_argument("--clip_to_box", type=int, default=1)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:405:    ap.add_argument("--save_vis", type=int, default=0)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:406:    ap.add_argument("--vis_stride", type=int, default=3000)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:407:    ap.add_argument("--progress_every", type=int, default=500)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:408:    ap.add_argument("--device", default="cuda")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:409:    ap.add_argument("--overwrite", action="store_true")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:423:    print("[SICS155_100 SAM2 FULL PACKED MASK BUILDER]", flush=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:424:    print("DATA:", DATA, flush=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:425:    print("YOLO:", YOLO, flush=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:426:    print("OUT:", OUT, flush=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:427:    print("SAM2_CFG:", SAM2_CFG, flush=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:428:    print("SAM2_CKPT:", SAM2_CKPT, flush=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:434:        config_file=SAM2_CFG,
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:435:        ckpt_path=SAM2_CKPT,
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:439:    predictor = SAM2ImagePredictor(sam2_model)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:441:    summary_path = OUT / "meta" / "summary_all.jsonl"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_sam2_masks_full_packed.py:463:    print("Output:", OUT, flush=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:13:ROOT = Path("/root/autodl-tmp/MS-TCN2")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:16:DATA = ROOT / "data/sics155_100_geoig_r025"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:17:MANIFEST = DATA / "frame_manifest"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:18:MASKD = ROOT / "data/sics155_100_sam2_masks_full"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:22:CAT101_BASE = ROOT / "data/cataract101_m10_a0_rgb2048"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:24:OLD_TRAIN_PY = ROOT / "m8/7_train_m8_igcoattn_v1_2_dualgate_framecls.py"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:26:OUT_DATA = DATA
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:63:    for sub in ["groundTruth", "splits", "frame_manifest", "reports"]:
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:64:        src = DATA / sub
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:74:    if (DATA / "mapping.txt").exists():
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:77:            shutil.copy2(DATA / "mapping.txt", q)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:82:        return sorted([p.stem for p in (DATA / "groundTruth").glob("*.txt")])
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:84:    p = DATA / "splits" / bundle
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:100:    p = DATA / "groundTruth" / f"{video}.txt"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:143:def build_model(ckpt_path, device):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:156:    ckpt = torch.load(ckpt_path, map_location="cpu")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:157:    state = ckpt["model_state_dict"] if isinstance(ckpt, dict) and "model_state_dict" in ckpt else ckpt
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:160:    log(f"[CKPT] loaded: {ckpt_path}")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:162:    log(f"[CKPT] epoch={ckpt.get('epoch') if isinstance(ckpt, dict) else None}")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:163:    log(f"[CKPT] best_acc={ckpt.get('best_acc') if isinstance(ckpt, dict) else None}")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:207:    mask_path = MASKD / "npz" / f"{video}.npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:212:    frame_ids = z["frame_ids"]
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:216:    if len(frame_ids) != T:
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:217:        raise RuntimeError(f"{video}: mask T={len(frame_ids)} != gt T={T}")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:270:        frame = cv2.imread(fp)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:312:    ap.add_argument("--out_dataset", type=str, default="sics155_100_geoig_r025")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:313:    ap.add_argument("--ckpt", type=str, required=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:314:    ap.add_argument("--bundle", type=str, default="all")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:315:    ap.add_argument("--video", type=str, default=None)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:316:    ap.add_argument("--limit", type=int, default=0)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:317:    ap.add_argument("--batch_size", type=int, default=32)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:318:    ap.add_argument("--overwrite", action="store_true")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:319:    ap.add_argument("--device", default="cuda")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:320:    ap.add_argument("--progress_every", type=int, default=3000)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:325:    out_data = ROOT / "data" / args.out_dataset
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:330:    log(f"out_dataset: {args.out_dataset}")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:332:    log(f"mask_dir: {MASKD}")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:333:    log(f"ckpt: {args.ckpt}")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:337:    model, captured, handle = build_model(args.ckpt, device)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:382:        "out_dataset": args.out_dataset,
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/extract_sics155_100_a3b_v12_dualgate_features.py:383:        "ckpt": args.ckpt,
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:10:ROOT = Path("/root/autodl-tmp/MS-TCN2")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:12:DATA = ROOT / "data/sics155_100_geoig_r025"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:13:YOLO = ROOT / "data/sics155_100_yolo_b2_multiinst_assets/npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:14:SAM2 = ROOT / "data/sics155_100_sam2_masks_full/npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:16:OUT_ROOT = ROOT / "data/sics155_100_a4_geo_assets_sam2_yolo_tiptrack_cons_compat"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:17:OUT_NPZ = OUT_ROOT / "npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:18:OUT_META = OUT_ROOT / "meta"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:26:    for sub in ["npz", "meta", "groundTruth", "splits"]:
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:27:        (OUT_ROOT / sub).mkdir(parents=True, exist_ok=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:29:    shutil.copy2(DATA / "mapping.txt", OUT_ROOT / "mapping.txt")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:31:    for p in (DATA / "groundTruth").glob("*.txt"):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:32:        q = OUT_ROOT / "groundTruth" / p.name
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:36:    for p in (DATA / "splits").glob("*.bundle"):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:37:        q = OUT_ROOT / "splits" / p.name
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:44:        return sorted([p.stem for p in (DATA / "groundTruth").glob("*.txt")])
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:46:    p = DATA / "splits" / bundle
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:62:    p = DATA / "groundTruth" / f"{video}.txt"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:89:    frame_ids = sam["frame_ids"]
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:90:    T = len(frame_ids)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:98:    # prefer SAM mask center if available; it is already normalized in our SICS SAM2 script.
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:130:      - centers from SAM mask center if union center available is only one; for multi-inst use YOLO box centers.
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:134:    T = len(sam["frame_ids"])
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:199:    T = len(sam["frame_ids"])
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:202:        raise RuntimeError(f"{video}: SAM2 T={T}, GT T={T_gt}")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:204:    frame_ids = sam["frame_ids"].astype(np.int32)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:339:        "frame_ids": frame_ids.astype(np.int32),
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:351:    out_npz = OUT_NPZ / f"{video}.npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:352:    out_meta = OUT_META / f"{video}_summary.json"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:361:    sam = safe_load(SAM2 / f"{video}.npz")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:362:    yolo = safe_load(YOLO / f"{video}.npz")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:366:    np.savez_compressed(out_npz, **assets)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:368:    T = assets["frame_ids"].shape[0]
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:396:    ap.add_argument("--bundle", default="all")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:397:    ap.add_argument("--video", default=None)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:398:    ap.add_argument("--limit", type=int, default=0)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:399:    ap.add_argument("--overwrite", action="store_true")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:413:    print("[SICS155_100 A4 GeoIG assets: YOLO tiptrack conservative compat]", flush=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:414:    print("DATA:", DATA, flush=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:415:    print("YOLO:", YOLO, flush=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:416:    print("SAM2:", SAM2, flush=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:417:    print("OUT:", OUT_ROOT, flush=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:421:    summary_path = OUT_META / "summary_all.jsonl"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_a4_geo_assets_yolo_tiptrack_cons_compat.py:441:    print("Output:", OUT_NPZ, flush=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:11:ROOT = Path("/root/autodl-tmp/MS-TCN2")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:13:DATA = ROOT / "data/sics155_100_geoig_r025"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:14:SAM2 = ROOT / "data/sics155_100_sam2_masks_full/npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:15:YOLO = ROOT / "data/sics155_100_yolo_b2_multiinst_assets/npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:16:A4 = ROOT / "data/sics155_100_a4_geo_assets_sam2_yolo_tiptrack_cons_compat/npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:18:OUT_ROOT = ROOT / "data/sics155_100_a5_maskshape_assets_v1_safe"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:19:OUT_NPZ = OUT_ROOT / "npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:20:OUT_META = OUT_ROOT / "meta"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:65:    for sub in ["npz", "meta", "groundTruth", "splits"]:
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:66:        (OUT_ROOT / sub).mkdir(parents=True, exist_ok=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:68:    shutil.copy2(DATA / "mapping.txt", OUT_ROOT / "mapping.txt")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:70:    for p in (DATA / "groundTruth").glob("*.txt"):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:71:        q = OUT_ROOT / "groundTruth" / p.name
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:75:    for p in (DATA / "splits").glob("*.bundle"):
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:76:        q = OUT_ROOT / "splits" / p.name
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:83:        return sorted([p.stem for p in (DATA / "groundTruth").glob("*.txt")])
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:85:    p = DATA / "splits" / bundle
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:101:    return sum(1 for x in open(DATA / "groundTruth" / f"{video}.txt", encoding="utf-8") if x.strip())
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:174:    out_path = OUT_NPZ / f"{video}.npz"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:175:    meta_path = OUT_META / f"{video}_maskshape_summary.json"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:185:    sam = np.load(SAM2 / f"{video}.npz", allow_pickle=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:187:    yolo = np.load(YOLO / f"{video}.npz", allow_pickle=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:189:    frame_ids = sam["frame_ids"].astype(np.int32)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:190:    T = len(frame_ids)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:193:        raise RuntimeError(f"{video}: SAM2 T={T}, GT T={T_gt}")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:308:    np.savez_compressed(
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:310:        frame_ids=frame_ids.astype(np.int32),
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:363:    ap.add_argument("--bundle", default="all")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:364:    ap.add_argument("--video", default=None)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:365:    ap.add_argument("--limit", type=int, default=0)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:366:    ap.add_argument("--chunk", type=int, default=512)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:367:    ap.add_argument("--bitorder", default="little", choices=["little", "big"])
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:368:    ap.add_argument("--overwrite", action="store_true")
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:383:    print("DATA:", DATA, flush=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:384:    print("SAM2:", SAM2, flush=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:386:    print("YOLO:", YOLO, flush=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:387:    print("OUT:", OUT_NPZ, flush=True)
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:392:    summary_path = OUT_META / "summary_all.jsonl"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:410:    csv_path = OUT_ROOT / "build_maskshape_summary.csv"
+/root/autodl-tmp/GEOIG_NATIVE_PIPELINE_SOURCE_SNAPSHOT_20260809_131923/sics_cross/build_sics155_100_maskshape_assets_v1_safe.py:418:    print("Output:", OUT_NPZ, flush=True)

@@ -1,0 +1,8 @@
+* text=auto eol=lf
+# Preserve the supplied snapshot byte-for-byte, including its original newlines.
+cat101_native/** -text
+sics_cross/** -text
+stagefusion/** -text
+cataract1k_contract/** -text
+release_docs/** -text
+reports/** -text
